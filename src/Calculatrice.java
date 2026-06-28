@@ -8,6 +8,9 @@ public class Calculatrice {
     public double soustraction(double a, double b) {
         return a - b;
     }
+    public double multiplication(double a, double b) {
+    return a * b;
+    }
 
     public static void main(String[] args) {
 
@@ -22,9 +25,11 @@ public class Calculatrice {
         System.out.print("Entrez le deuxieme nombre : ");
         double nombre2 = clavier.nextDouble();
 
+        double produit = calcul.multiplication(nombre1, nombre2);
         double somme = calcul.addition(nombre1, nombre2);
         double difference = calcul.soustraction(nombre1, nombre2);
 
+        System.out.println("Multiplication : " + nombre1 + " * " + nombre2 + " = " + produit);
         System.out.println("Addition : " + nombre1 + " + " + nombre2 + " = " + somme);
         System.out.println("Soustraction : " + nombre1 + " - " + nombre2 + " = " + difference);
 
