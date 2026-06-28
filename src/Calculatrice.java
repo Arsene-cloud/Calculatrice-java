@@ -11,6 +11,12 @@ public class Calculatrice {
     public double multiplication(double a, double b) {
     return a * b;
     }
+    public double division(double a,double b){
+        if (b == 0) {
+            throw new IllegalArgumentException("Division par zero n est pas possible ");
+        }
+        return a / b;
+    }
 
     public static void main(String[] args) {
 
@@ -28,10 +34,11 @@ public class Calculatrice {
         double produit = calcul.multiplication(nombre1, nombre2);
         double somme = calcul.addition(nombre1, nombre2);
         double difference = calcul.soustraction(nombre1, nombre2);
-
+        double division=calcul.division(nombre1,nombre2);
         System.out.println("Multiplication : " + nombre1 + " * " + nombre2 + " = " + produit);
         System.out.println("Addition : " + nombre1 + " + " + nombre2 + " = " + somme);
         System.out.println("Soustraction : " + nombre1 + " - " + nombre2 + " = " + difference);
+        System.out.println("Division : " + nombre1 + " / " + nombre2 + " = " + division);
 
         clavier.close();
     }
