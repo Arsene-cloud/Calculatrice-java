@@ -5,39 +5,34 @@ public class Calculatrice {
     public double addition(double a, double b) {
         return a + b;
     }
-
     public double soustraction(double a, double b) {
         return a - b;
     }
-
     public double multiplication(double a, double b) {
-        return a * b;
-    }
-
-    public double diviser(double a, double b) {
-        return a / b;
+    return a * b;
     }
 
     public static void main(String[] args) {
+
         Scanner clavier = new Scanner(System.in);
+        Calculatrice calcul = new Calculatrice();
 
         System.out.println("CALCULATRICE");
+
         System.out.print("Entrez le premier nombre : ");
         double nombre1 = clavier.nextDouble();
 
-        System.out.print("Entrez le deuxième nombre : ");
+        System.out.print("Entrez le deuxieme nombre : ");
         double nombre2 = clavier.nextDouble();
 
-        Calculatrice calcul = new Calculatrice();
-
+        double produit = calcul.multiplication(nombre1, nombre2);
         double somme = calcul.addition(nombre1, nombre2);
         double difference = calcul.soustraction(nombre1, nombre2);
-        double produit = calcul.multiplication(nombre1, nombre2);
-        double quotient = calcul.diviser(nombre1, nombre2);
 
-        System.out.println("Addition : " + somme);
-        System.out.println("Soustraction : " + difference);
-        System.out.println("Multiplication : " + produit);
-        System.out.println("Division : " + quotient);
+        System.out.println("Multiplication : " + nombre1 + " * " + nombre2 + " = " + produit);
+        System.out.println("Addition : " + nombre1 + " + " + nombre2 + " = " + somme);
+        System.out.println("Soustraction : " + nombre1 + " - " + nombre2 + " = " + difference);
+
+        clavier.close();
     }
 }
